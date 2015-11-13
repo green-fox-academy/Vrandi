@@ -1,0 +1,55 @@
+body {
+  background-image: url(../img/footer_lodyas.png);
+  color: #ecf0f1;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
+header {
+  background-image: url(../img/cvpic.jpg);
+  background-position: center center;
+  background-size: cover;
+  color: #484848 ;
+  padding-bottom: 250px;
+  padding-left: 70px;
+  padding-right: 50px;
+  padding-top: 100px;
+}
+
+h1 {
+  font-family: 'Abril Fatface', serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 40em;
+}
+
+blockquote {
+  background-image: url(../img/triangular.png);
+  background-position: center center;
+  border-radius: 5px;
+  color: #484848;
+  font-size: 26px;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+}
+
+.author {
+  font-size: 15px;
+}
+
+.exp {
+  line-height: 1;
+}
+
+.thanks {
+  font-family: 'Abril Fatface', serif;
+  image-orientation: center;
+  text-align: center;
+}
