@@ -1,7 +1,7 @@
 body {
   background-image: url(../img/footer_lodyas.png);
   color: #ecf0f1;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Titillium Web' sans-serif;
   line-height: 1.5;
   margin: 0;
 }
@@ -10,7 +10,7 @@ header {
   background-image: url(../img/cvpic.jpg);
   background-position: center center;
   background-size: cover;
-  color: #484848 ;
+  color: #484848;
   padding-bottom: 250px;
   padding-left: 70px;
   padding-right: 50px;
@@ -18,12 +18,30 @@ header {
 }
 
 h1 {
-  font-family: 'Abril Fatface', serif;
+  font-family: 'Merriweather', serif;
 }
 
 .container {
   margin: 0 auto;
   max-width: 40em;
+}
+
+ul > li {
+  list-style-type: square;
+}
+
+a {
+  color: #ecf0f1;
+}
+
+a:hover {
+  color: #999;
+}
+
+.cica, .hole {
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 250px;
 }
 
 blockquote {
@@ -32,9 +50,10 @@ blockquote {
   border-radius: 5px;
   color: #484848;
   font-size: 26px;
+  font-weight: 500;
   line-height: 1.5;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 25px;
@@ -48,8 +67,20 @@ blockquote {
   line-height: 1;
 }
 
-.thanks {
-  font-family: 'Abril Fatface', serif;
+.fitness {
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 200px;
+}
+
+.contacts, .me, .studies, .exp, .other {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.thankyounote {
+  font-family: 'Titillium Web' sans-serif;
   image-orientation: center;
+  padding-bottom: 70px;
   text-align: center;
 }
