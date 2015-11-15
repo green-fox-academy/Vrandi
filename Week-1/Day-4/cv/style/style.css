@@ -38,7 +38,7 @@ a:hover {
   color: #999;
 }
 
-.cica, .hole {
+.catgif, .hole {
   border-radius: 5px;
   margin-left: 15px;
   width: 250px;
@@ -73,7 +73,7 @@ blockquote {
   width: 200px;
 }
 
-.contacts, .me, .studies, .exp, .other {
+.mainsections {
   padding-top: 30px;
   padding-bottom: 30px;
 }
