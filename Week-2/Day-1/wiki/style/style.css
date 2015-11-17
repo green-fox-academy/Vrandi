@@ -1,8 +1,24 @@
 
 body {
-  margin: 0 auto;
+  background: #f6f6f6;
   display: flex;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 22.4px;
+  margin: 0 auto;
   min-height: 100vh;
+}
+
+h1, h2 {
+  font-family: serif;
+  font-weight: normal;
+  margin: 0;
+  border-bottom: 1px solid #aaa;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 28.8px;
 }
 
 .main-container {
@@ -13,7 +29,6 @@ body {
 .main-header {
   height: 80px;
   width: inherit;
-  background: #f6f6f6;
   position: relative;
 }
 
@@ -53,7 +68,7 @@ button {
 }
 
 .edit-menu {
-  right: 300px;
+  right: 270px;
   bottom: 0;
 }
 
@@ -62,10 +77,16 @@ button {
   margin: 0 5px 0 5px;
 }
 
-main {
+.main-content {
   background: #ffffff;
   border: 1px solid #a7d7f9;
-  padding: 15px;
+  border-right: 0;
+  padding: 16px;
+}
+
+a {
+  color: rgb(6, 69, 173);
+  text-decoration: none;
 }
 
 .biography {
@@ -78,19 +99,33 @@ main {
   width: 270px;
 }
 
+.blue-listing {
+  list-style-image: url(../img/dot.svg);
+}
+
+.blue-listing li {
+  margin: 5px 0;
+}
+
 .main-footer {
   background: #f6f6f6;
   height: 150px;
   width: inherit;
 }
 
+.logo {
+  display: block;
+  width: 136px;
+  height: 150px;
+  background: url(../img/logo.png);
+  margin: 6px auto 0;
+  color: transparent;
+
+}
+
 .main-sidebar {
   background: #f6f6f6;
   width: 176px;
   order: 0;
-}
-
-.wikisymbol {
-  width: 160px;
-  height: auto;
+  flex: 0 0 auto;
 }
