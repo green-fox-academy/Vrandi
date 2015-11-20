@@ -12,31 +12,33 @@
 
         <nav class="user-menu">
           <ul>
-            <li>Create account</li>
-            <li>Not logged in</li>
-            <li>Talk</li>
-            <li>Contributions</li>
-            <li>Log in</li>
+            <li><a href="#">Create account</a></li>
+            <li class="user-status">Not logged in</li>
+            <li><a href="https://en.wikipedia.org/wiki/User_talk:82.150.33.130">Talk</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Special:Contributions/82.150.33.130">Contributions</a></li>
+            <li><a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Margaret+Hamilton+%28scientist%29">Log in</a></li>
           </ul>
         </nav>
 
-        <nav class="talk-menu">
+        <nav class="talk-menu tab">
           <ul>
-            <li>Article</li>
-            <li>Talk</li>
+            <li class="active-tab"><a href="#">Article</a></li>
+            <li><a href="#">Talk</a></li>
           </ul>
         </nav>
 
-        <nav class="edit-menu">
+        <nav class="edit-menu tab">
           <ul>
-            <li>Read</li>
-            <li>Edit</li>
-            <li>View history</li>
+            <li class="active-tab"><a href="#">Read</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">View history</a></li>
           </ul>
+
         </nav>
 
         <form class="search">
-          <input type="search" autofocus placeholder="Search">
+          <input class="search-line" type="search" placeholder="Search">
+          <input class="button" type="submit" name="search_button" value="">
         </form>
 
       </header>
@@ -49,7 +51,30 @@
           <em>For other people named Margaret Hamilton, see <a href="https://en.wikipedia.org/wiki/Margaret_Hamilton">Margaret Hamilton (disambiguation).</a></em>
         </p>
         <div class="biography">
+          <h3>Margaret Hamilton</h3>
           <img src="img/margareth.jpg" alt="Margaret Heafield" />
+          <p>Hamilton in 1995</p>
+          <table>
+            <tr>
+              <td><strong>Born</strong></td>
+              <td>August 17, 1936 (age 79) <a href="#">Paoli, Indiana</a></td>
+            </tr>
+            <tr>
+              <td><strong>Education</strong></td>
+              <td>Earlham College</td>
+            </tr>
+            <tr>
+              <td><strong>Occupation</strong></td>
+              <td>
+                CEO of Hamilton Technologies, Inc.
+                <a href="#">Computer scientist</a>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Spouse(s)</strong></td>
+              <td>James Cox Hamilton</td>
+            </tr>
+          </table>
         </div>
         <p>
           <strong>Margaret Heafield Hamilton</strong> (born August 17, 1936)[1] is a <a href="https://en.wikipedia.org/wiki/Computer_scientist">computer scientist</a>, <a href="https://en.wikipedia.org/wiki/Systems_engineering">systems engineer</a>, and <a href="https://en.wikipedia.org/wiki/Businessperson">business owner</a>. She was Director of the Software Engineering Division of the <a href="https://en.wikipedia.org/wiki/Charles_Stark_Draper_Laboratory">MIT Instrumentation Laboratory</a>, which developed on-board flight software for the <a href="https://en.wikipedia.org/wiki/Apollo_program">Apollo space program</a>.[2] In one of the critical moments of the <a href="https://en.wikipedia.org/wiki/Apollo_11">Apollo 11</a> mission, Hamilton's team's work prevented an abort of landing on the moon.[3] In 1986, she became the founder and CEO of Hamilton Technologies, Inc.
@@ -67,19 +92,31 @@
           From 1961 to 1963, she worked on the <a href="https://en.wikipedia.org/wiki/Semi-Automatic_Ground_Environment">SAGE Project</a> at <a href="https://en.wikipedia.org/wiki/MIT_Lincoln_Laboratory">Lincoln Labs</a>, where she was one of the programmers who wrote software for the first <a href="https://en.wikipedia.org/wiki/AN/FSQ-7_Combat_Direction_Central">AN/FSQ-7 computer (the XD-1)</a>, to search for "unfriendly" aircraft; she also wrote software for the <a href="https://en.wikipedia.org/wiki/Air_Force_Cambridge_Research_Laboratories">Air Force Cambridge Research Laboratories</a>.
         </p>
         <h2>NASA</h2>
+        <div class="nasa">
+          <img src="img/margareth2.jpg" alt="Working">
+          <p>
+            Hamilton during her time as lead Apollo flight software designer.
+          </p>
+        </div>
         <p>
           Hamilton then joined the Charles Stark Draper Laboratory at MIT, which at the time was working on the Apollo space mission. She eventually became the director and supervisor of software programming for Apollo and Skylab.[8]
         </p>
         <p>
-          At NASA, Hamilton's team was responsible for helping pioneer the Apollo on-board guidance software required to navigate and land on the Moon, and its multiple variations used on numerous missions (including the subsequent Skylab).[2] She worked to gain hands-on experience during a time when computer science and software engineering courses or disciplines were non-existent.
+          At <a href="https://en.wikipedia.org/wiki/NASA">NASA</a>, Hamilton's team was responsible for helping pioneer the Apollo on-board guidance software required to navigate and land on the Moon, and its multiple variations used on numerous missions (including the subsequent <a href="https://en.wikipedia.org/wiki/Skylab">Skylab</a>).[2] She worked to gain hands-on experience during a time when computer science and software engineering courses or disciplines were non-existent.
         </p>
         <p>
-          Her areas of expertise include systems design and software development, enterprise and process modelling, development paradigm, formal systems modeling languages, system-oriented objects for systems modelling and development, automated life-cycle environments, methods for maximizing software reliability and reuse, domain analysis, correctness by built-in language properties, open-architecture techniques for robust systems, full life-cycle automation, quality assurance, seamless integration, error detection and recovery techniques, man-machine interface systems, operating systems, end-to-end testing techniques, and life-cycle management techniques.[2]
+          Her areas of expertise include <a href="https://en.wikipedia.org/wiki/Systems_design">systems design</a> and <a href="https://en.wikipedia.org/wiki/Software_development">software development</a>, enterprise and process modelling, development paradigm, formal systems modeling languages, system-oriented objects for systems modelling and development, automated life-cycle environments, methods for maximizing software reliability and reuse, domain analysis, correctness by built-in language properties, open-architecture techniques for robust systems, full life-cycle automation, quality assurance, seamless integration, error detection and recovery techniques, man-machine interface systems, operating systems, end-to-end testing techniques, and life-cycle management techniques.[2]
         </p>
         <p>
           She was one of those who developed concepts of asynchronous software, priority scheduling, and Human-in-the-loop decision capability, which became the foundation for modern, ultra-reliable software design.
         </p>
         <h3>Apollo 11</h3>
+        <div class="apollo">
+          <img src="img/Margareth3.gif" alt="Margy"/>
+          <p>
+            Margaret Hamilton standing next to listings of the actual Apollo Guidance Computer (AGC) source code[9]
+          </p>
+        </div>
         <p>
           Hamilton's work in the Apollo Guidance Computer software prevented an abort of the Apollo 11 Moon landing:[3] Three minutes before the Lunar lander reached the Moon's surface, several computer alarms were triggered. The computer was overloaded with incoming data, because the rendezvous radar system (not necessary for landing) updated an involuntary counter in the computer, which stole cycles from the computer. Due to its robust architecture, the computer was able to keep running; the Apollo onboard flight software was developed using an asynchronous executive so that higher priority jobs (important for landing) could interrupt lower priority jobs. The fault was attributed to a faulty checklist.
         </p>
@@ -99,6 +136,12 @@
           In 1986, she became the founder and CEO of Hamilton Technologies, Inc. in Cambridge, Massachusetts. The company was developed around the Universal Systems Language (USL) and its associated automated environment, the 001 Tool Suite, based on her paradigm of Development Before The Fact (DBTF) for systems design and software development.[4][14][15][16]
         </p>
         <h2>Legacy</h2>
+        <div class="official">
+          <img src="img/Margaret1989.jpg" alt="Margaret Nasa official" />
+          <p>
+            Official photo for NASA, 1989.
+          </p>
+        </div>
         <p>
           Hamilton is credited with coining the term "software engineering".[17] In this field she was one of those who developed the concepts of asynchronous software, priority scheduling, end-to-end testing, and human-in-the-loop decision capability, such as priority displays which then became the foundation for ultra reliable software design.[18]
         </p>
@@ -122,11 +165,64 @@
           <li>M. Hamilton and W. R. Hackler (2008), "Universal Systems Language: Lessons Learned from Apollo", IEEE Computer, Dec. 2008.</li>
         </ul>
       </main>
-      <footer class="main-footer"></footer>
+      <footer class="main-footer">
+      </footer>
     </div>
     <aside class="main-sidebar">
       <a href="#" class="logo">Wikipedia</a>
+      <div class="base-side">
+        <p><a href="#">Main page</a></p>
+        <p><a href="#">Contents</a></p>
+        <p><a href="#">Featured content</a></p>
+        <p><a href="#">Current events</a></p>
+        <p><a href="#">Random article</a></p>
+        <p><a href="#">Donate to Wikipedia</a></p>
+        <p><a href="#">wikipedia store</a></p>
+      </div>
+      <div class="background-line"></div>
+      <div class="interactions">
+        <p>Interactions</p>
+        <ul>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">About Wikipedia</a></li>
+          <li><a href="#">Community portal</a></li>
+          <li><a href="#">Recent changes</a></li>
+          <li><a href="#">Contact page</a></li>
+        </ul>
+      </div>
+      <div class="background-line"></div>
+      <div class="tools">
+        <p>Tools</p>
+        <ul>
+          <li><a href="#">What links here</a></li>
+          <li><a href="#">Related changes</a></li>
+          <li><a href="#">Upload file</a></li>
+          <li><a href="#">Special pages</a></li>
+          <li><a href="#">Permanent link</a></li>
+          <li><a href="#">Page information</a></li>
+          <li><a href="#">Wikidata item</a></li>
+          <li><a href="#">Cite this page</a></li>
+        </ul>
+      </div>
+      <div class="background-line"></div>
+      <div class="print-export">
+        <p>Print/export</p>
+        <ul>
+          <li><a href="#">Create a book</a></li>
+          <li><a href="#">Download as PDF</a></li>
+          <li><a href="#">Printable version</a></li>
+        </ul>
+      </div>
+      <div class="background-line"></div>
+      <div class="languages">
+        <p>Languages</p>
+        <ul>
+          <li><a href="#">English</a></li>
+          <li><a href="#">Italian</a></li>
+          <li><a href="#">Hungarian</a></li>
+        </ul>
+        <p>Edit links</p>
+      </div>
     </aside>
-
   </body>
 </html>

@@ -1,6 +1,6 @@
 
 body {
-  background: #f6f6f6;
+  background: linear-gradient(to bottom, #fff 50px, #f6f6f6 150px);
   display: flex;
   font-family: sans-serif;
   font-size: 14px;
@@ -10,32 +10,65 @@ body {
 }
 
 h1, h2 {
+  border-bottom: 1px solid #aaa;
   font-family: serif;
   font-weight: normal;
   margin: 0;
-  border-bottom: 1px solid #aaa;
   overflow: hidden;
 }
 
 h1 {
-  font-size: 28.8px;
+  font-size: 30px;
+  padding-bottom: 0.25em;
+}
+
+a {
+  color: rgb(6, 69, 173);
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+input[type="search"] {
+   -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+   -webkit-appearance: none;
 }
 
 .main-container {
-  width: 100%;
   order: 1;
+  width: 100%;
 }
 
+/*
+#################
+HEADER
+#################
+*/
+
 .main-header {
+  font-size: 12px;
   height: 80px;
-  width: inherit;
   position: relative;
 }
 
 .main-header ul {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
+}
+
+.main-header li {
+  list-style: none;
 }
 
 .main-header nav, .search {
@@ -43,39 +76,92 @@ h1 {
 }
 
 .user-menu {
-  right: 0;
+  right: 10px;
   top: 0;
+}
 
+.user-menu a {
+  display: block;
+  padding: 10px 5px;
+}
+
+.user-status {
+  background: url(https://en.wikipedia.org/static/1.27.0-wmf.6/skins/Vector/images/user-icon.png?9e7ea) no-repeat 5px center;
+  color: gray;
+  padding: 10px 5px 10px 20px;
 }
 
 .talk-menu {
+  bottom: 0;
   left: 0;
-  bottom: 0;
-}
-
-.search {
-  right: 0;
-  bottom: 0;
-}
-
-.search input {
-  width: 270px;
-}
-
-button {
-  width: 20px;
-  height: 20px;
 }
 
 .edit-menu {
-  right: 270px;
   bottom: 0;
+  right: 290px;
 }
 
-.main-header li {
-  list-style: none;
-  margin: 0 5px 0 5px;
+.search {
+  bottom: 5px;
+  right: 10px;
 }
+
+.search-line {
+  background: linear-gradient(to bottom, #f6f6f6 0%, #fff 50%);
+  border: 1px solid #aaa;
+  height: 25px;
+  padding: 0 25px 0 5px;
+  width: 270px;
+}
+
+:focus {
+  outline: 0;
+}
+
+.button {
+  background: url(https://en.wikipedia.org/static/1.27.0-wmf.6/skins/Vector/images/search-ltr.png?511c1) no-repeat center;
+  border: 1px solid #aaa;
+  border-left: none;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+}
+
+.tab {
+  background: linear-gradient(to bottom, #fff 0%, #a7d7f9 100%);
+  padding-left: 1px;
+}
+
+.tab li {
+  padding-right: 1px;
+}
+
+.tab a {
+  background: linear-gradient(to bottom, #fff 0%, #e8f2f8 100%);
+  bottom: -1px;
+  display: block;
+  padding: 15px 5px 5px 5px;
+  position: relative;
+}
+
+.tab a:visited {
+  color: rgb(6, 69, 173);
+}
+
+.active-tab a {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/*
+########################
+MAIN
+########################
+*/
 
 .main-content {
   background: #ffffff;
@@ -84,20 +170,53 @@ button {
   padding: 16px;
 }
 
-a {
-  color: rgb(6, 69, 173);
-  text-decoration: none;
-}
-
 .biography {
   background: #f9f9f9;
   border: 1px solid #aaaaaa;
   box-sizing: border-box;
   float: right;
   margin: 6px 0 12px 12px;
-  padding: 25px;
+  padding: 10px 10px 5px 10px;
   width: 270px;
+  font-size: 12px;
+  text-align: center;
 }
+
+.biography h3 {
+  margin: 0;
+}
+
+.biography p {
+  margin: -10px 0 0 0;
+  padding: 0;
+}
+
+table {
+  padding: -10px;;
+  text-align: left;
+}
+
+tbody {
+  vertical-align: top;
+}
+
+.nasa, .apollo, .official {
+  background: #f9f9f9;
+  border: 1px solid #aaaaaa;
+  box-sizing: border-box;
+  float: right;
+  font-size: 94%;
+  margin: 6px 0 10px 10px;
+  max-width: 230px;
+  padding: 3px;
+  text-align: center;
+}
+
+.nasa p, .apollo p, .official p {
+  margin: 0;
+  text-align: left;
+}
+
 
 .blue-listing {
   list-style-image: url(../img/dot.svg);
@@ -107,25 +226,71 @@ a {
   margin: 5px 0;
 }
 
+/*
+###############
+FOOTER
+###############
+*/
 .main-footer {
   background: #f6f6f6;
   height: 150px;
   width: inherit;
 }
 
-.logo {
-  display: block;
-  width: 136px;
-  height: 150px;
-  background: url(../img/logo.png);
-  margin: 6px auto 0;
-  color: transparent;
-
-}
+/*
+##############
+SIDEBAR
+##############
+*/
 
 .main-sidebar {
-  background: #f6f6f6;
-  width: 176px;
-  order: 0;
+  box-sizing: border-box;
+  display: flex;
   flex: 0 0 auto;
+  order: 0;
+  width: 176px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.logo {
+  background: url(../img/logo.png);
+  color: transparent;
+  display: block;
+  height: 150px;
+  margin: 6px auto 0;
+  width: 136px;
+}
+
+aside div {
+  box-sizing: border-box;
+  display: block;
+  font-size: 12px;
+  padding: 5px 0 5px 20px;
+}
+
+aside p {
+  color: #4d4d4d;
+  margin: 0 auto;
+}
+
+aside ul {
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+aside li {
+  list-style: none;
+  line-height: 20px;
+}
+
+.background-line {
+  height: 1px;
+  background: linear-gradient(to right, #fff 0%, #aaa 50%, #fff 100%);
+  padding: 0;
+}
+
+.base-side {
+  margin-top: 30px;
+  line-height: 20px;
 }
