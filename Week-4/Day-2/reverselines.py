@@ -5,7 +5,8 @@ def fileread():
         new = [x[::-1] for x in s]
         return new
 
-def writeconsole(line_list):
-    return ''.join(line_list)
+def writetofile(line_list):
+    with open('zen_of_python.txt', 'w') as out:
+        out.write(''.join(line_list))
 
-print(writeconsole(fileread()))
+writetofile(fileread())

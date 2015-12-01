@@ -4,7 +4,8 @@ def fileread():
         s = f.readlines()
         return s
 
-def reversing(line_list):
-    return ''.join(line_list[::-1])
+def write_reversed_to_file(line_list):
+    with open('zen_of_python.txt', 'w') as out:
+        out.write(''.join(line_list[::-1]))
 
-print(reversing(fileread()))
+write_reversed_to_file(fileread())

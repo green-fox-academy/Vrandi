@@ -4,6 +4,7 @@ def fileread():
         s = f.readlines()
         return s
 
+
 def decoder(line_list):
     new = []
     for line in line_list:
@@ -11,7 +12,11 @@ def decoder(line_list):
         for i in range(0,len(line), 2):
             st += line[i]
         new.append(st)
-    return ''.join(new)
+    return new
 
 
-print(decoder(fileread()))
+def filewriter(ordered_list):
+    with open('zen_of_python.txt', 'w') as out:
+        out.write(''.join(ordered_list))
+
+filewriter(decoder(fileread()))

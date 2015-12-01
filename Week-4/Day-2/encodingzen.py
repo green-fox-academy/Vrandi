@@ -13,8 +13,11 @@ def decoder(line_list):
                 st += i
             else:
                 st += chr(ord(i)-1)
-
         new.append(st)
-    return ''.join(new)
+    return new
 
-print(decoder(fileread()))
+def filewriter(ordered_list):
+    with open('zen_of_python.txt', 'w') as out:
+        out.write(''.join(ordered_list))
+
+filewriter(decoder(fileread()))
