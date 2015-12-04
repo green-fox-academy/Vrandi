@@ -9,11 +9,11 @@ def print_menu():
         '*'*32,
         '\n*'+'\t'*3+'1: List current items'+'\t'*4+'*',
         '\n*'+'\t'*3+'2: Add new items'+'\t'*4+'*',
-        '\n*'+'\t'*3+'3: Move items'+'\t'*5+'*',
+        '\n*'+'\t'*3+'3: Move item'+'\t'*5+'*',
         '\n*'+'\t'*3+'4: List Doing items'+'\t'*4+'*',
         '\n*'+'\t'*3+'5: List Done items'+'\t'*4+'*',
-        '\n*'+'\t'*3+'6: Remove items'+'\t'*5+'*',
-        '\n*'+'\t'*3+'7: Erase lists'+'\t'*5+'*',
+        '\n*'+'\t'*3+'6: Remove item'+'\t'*5+'*',
+        '\n*'+'\t'*3+'7: Erase list'+'\t'*5+'*',
         '\n*'+'\t'*3+'X: Exit'+'\t'*2,
         '*'*32
         )
@@ -50,7 +50,7 @@ def main():
             elif path == 'd':
                 todo.remove_item_doing()
             elif path == 'n':
-                todo.remove_item_done
+                todo.remove_item_done()
             else:
                 print('Sorry wrong input')
         elif ch == '7':
