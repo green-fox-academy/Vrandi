@@ -1,0 +1,16 @@
+ 
+1. Zárójelezd be az almákat.
+cat proba.txt | sed -r "s/(alma)/\(\1\)/gi"
+(alma) (alma) malac
+
+2.
+Írj reguláris kifejezést, ami illeszkedik a 3-mal osztható bináris számokra!
+[1|4|7][2|5|8]|[2|5|8][1|4|7]|[3|6|9][0|3|6|9]
+
+
+3. e-mail cím:
+[\w\.-]+@[\w\.-]+\.[A-Za-z]{2,4}
+
+4. Írj reguláris kifejezést, amivel lebegõpontos számokat lehet felismerni!
+
+(-|)\d[,|.]\d+[×*]10\^(-|)(\d+) vagy (-|)[0|1]?[,|.]\d+[×|*]10\^(-|)(\d+)
