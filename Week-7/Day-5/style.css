@@ -1,0 +1,48 @@
+body {
+	background-image: url(images/back.png);
+	margin: 0; 
+}
+
+header {
+	background-position: center center;
+	margin: 5px;
+	padding: 10px;
+
+}
+
+h1 {
+	color: #2c3e50;
+	font-size: 60px;
+	margin: 10px;
+	text-align: center;
+}
+
+.galery_background {
+	background-color: #9bffce;
+	height: 700px;
+	margin: 0 auto;
+	padding: 40px 0px;
+	text-align: center;
+	width: 700px;
+}
+
+.galery, .buttons {
+	text-align: center;
+	vertical-align: middle;
+}
+
+button {
+	margin: 10px 10px;
+	background-color: #00d79f;
+	border-radius: 10px;
+	height: 50px;
+	width: 50px;
+}
+
+.thumbnails img {
+	height: 65px;
+	padding: 5px;
+}
+
+.thumbnails a:hover { -webkit-filter: opacity(50%); filter: opacity(50%); }
+
