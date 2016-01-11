@@ -1,5 +1,69 @@
 'use strict';
 
+function Gallery(pictureArray) {
+	var _this = this;
+	this.pictures = pictureArray;
+	this.currentPictureNumber = 0;
+	this.leftButton = document.querySelector('.left');
+	this.rightButton = document.querySelector('.right');
+	this.changingPicture = document.querySelector('.picturechanger');
+	this.thumbnails = document.querySelector('.thumbnails');
+	
+
+	this.leftButton.addEventListener('click', function() {
+		_this.leftEvent();
+	});
+
+	this.rightButton.addEventListener('click', function() {
+		_this.rightEvent();
+	});
+
+	this.thumbnails.addEventListener('click', function(event) {
+  	if (event.target.src) {
+    	_this.changingPicture.setAttribute('src', event.target.src);
+  	}
+	});
+
+	this.leftEvent = function() {
+		if (this.currentPictureNumber === 0) {
+			this.currentPictureNumber = this.pictures.length;
+		}
+		this.currentPictureNumber --;
+		this.changingPicture.setAttribute('src', this.pictures[this.currentPictureNumber]);
+	};
+
+	this.rightEvent = function() {
+		if (this.currentPictureNumber === this.pictures.length-1) {
+			this.currentPictureNumber = 0;
+		}
+		this.currentPictureNumber ++;
+		this.changingPicture.setAttribute('src', this.pictures[this.currentPictureNumber]);
+	};
+
+	this.createThumbnails = function() {
+		for (var i = 0; i < this.pictures.length; i++) {
+			var a = this.createReference();
+			var image = this.createImage(a, i);
+		}
+	};
+
+	this.createReference = function() {
+		var a = document.createElement('a');
+		a.setAttribute('href', '#');
+		this.thumbnails.appendChild(a);
+		return a;
+	};
+
+	this.createImage = function(referencetag, index) {
+		var image = document.createElement('img');
+		image.setAttribute('src', this.pictures[index]);
+		referencetag.appendChild(image);
+		return image;
+	};
+
+	this.createThumbnails();
+}
+
 var pictures = [
 	'images/1.jpg',
 	'images/2.jpg',
@@ -12,64 +76,4 @@ var pictures = [
 	'images/9.jpg'
 ];
 
-
-var currentPictureNumber = 0
-
-var left = document.querySelector('.left');
-var right = document.querySelector('.right');
-var pictureChanger = document.querySelector('.picturechanger');
-var thumbnails = document.querySelector('.thumbnails')
-createThumbnails();
-
-left.addEventListener('click', function() {
-	leftEvent();
-})
-
-right.addEventListener('click', function() {
-	rightEvent();
-})
-
-thumbnails.addEventListener('click', function(event) {
-  if (event.target.src) {
-    pictureChanger.setAttribute('src', event.target.src);
-  }
-});
-
-function leftEvent() {
-	if (currentPictureNumber === 0) {
-		currentPictureNumber = pictures.length;
-	}
-	currentPictureNumber --;
-	pictureChanger.setAttribute('src', pictures[currentPictureNumber]);
-}
-
-function rightEvent() {
-	if (currentPictureNumber === pictures.length-1) {
-		currentPictureNumber = 0;
-	}
-	currentPictureNumber ++;
-	pictureChanger.setAttribute('src', pictures[currentPictureNumber]);
-}
-
-function createThumbnails() {
-	for (var i = 0; i < pictures.length; i++) {
-		var a = createReference();
-		var image = createImage(a, i);
-	}
-}
-
-function createReference() {
-	var a = document.createElement('a');
-	a.setAttribute('href', '#');
-	thumbnails.appendChild(a);
-	return a;
-}
-
-function createImage(referencetag, index) {
-	var image = document.createElement('img');
-	image.setAttribute('src', pictures[index]);
-	referencetag.appendChild(image);
-	return image;
-}
-
-
+var gallery = new Gallery(pictures);
