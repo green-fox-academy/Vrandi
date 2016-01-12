@@ -15,6 +15,7 @@ function CandyGame() {
 
   this.candyButton = document.querySelector('.candy-button');
   this.lollyButton = document.querySelector('.lollipop-button');
+  this.tenButton = document.querySelector('.tenlolli-button');
 
   this.candyButton.addEventListener('click', function() {
     _this.NumberOfCandies++;
@@ -27,10 +28,19 @@ function CandyGame() {
     _this.refreschStats();
   })
 
+  this.tenButton.addEventListener('click', function() {
+    _this.NumberOfLollipops += 10;
+    _this.NumberOfCandies -= 100;
+    _this.refreschStats();
+  })
+
   this.init = function() {
       setInterval(function() {
       _this.NumberOfCandies += _this.NumberOfCounter;
       _this.refreschStats();
+      if (_this.NumberOfCandies === 10000) {
+        alert("WIN!!!");
+      }
     }, 1000);
   };
 
@@ -38,26 +48,38 @@ function CandyGame() {
     this.candies.innerHTML = this.NumberOfCandies;
     this.lollipops.innerHTML = this.NumberOfLollipops;
     this.NumberOfCounter = this.setCounter();
-    console.log(this.NumberOfCounter);
     this.counter.innerHTML = this.NumberOfCounter;
-    this.buttonDisability();
+    this.checkLollipopButtonAbility();
+    this.checkTenLollipopButtonAbility();
   };
 
   this.setCounter = function() {
     return Math.floor(this.NumberOfLollipops/10);
   }
 
-  this.buttonDisability = function() {
-    if (this.checkCandyAmount()) {
+  this.checkLollipopButtonAbility = function() {
+    if (this.checkCandyAmountForTen()) {
       this.lollyButton.removeAttribute('disabled');
     } else {
       this.lollyButton.setAttribute('disabled', 'disabled');
     }
   };
 
-  this.checkCandyAmount = function() {
+  this.checkTenLollipopButtonAbility = function() {
+    if (this.checkCandyAmountForHundred()) {
+      this.tenButton.removeAttribute('disabled');
+    } else {
+      this.tenButton.setAttribute('disabled', 'disabled');
+    }
+  };
+
+  this.checkCandyAmountForTen = function() {
     return this.NumberOfCandies > 9;
   };
+
+  this.checkCandyAmountForHundred = function() {
+    return this.NumberOfCandies > 99;
+  }
 
 }
 
