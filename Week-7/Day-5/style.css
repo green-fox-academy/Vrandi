@@ -1,6 +1,6 @@
 body {
 	background-image: url(images/back.png);
-	margin: 0; 
+	margin: 0;
 }
 
 header {
@@ -17,7 +17,7 @@ h1 {
 	text-align: center;
 }
 
-.galery_background {
+.gallery-background {
 	background-color: #9bffce;
 	height: 700px;
 	margin: 0 auto;
@@ -26,7 +26,7 @@ h1 {
 	width: 700px;
 }
 
-.galery, .buttons {
+.gallery, .buttons {
 	text-align: center;
 	vertical-align: middle;
 }

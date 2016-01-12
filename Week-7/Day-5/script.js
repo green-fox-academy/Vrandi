@@ -1,14 +1,14 @@
 'use strict';
 
-function Gallery(pictureArray) {
+function Gallery(pictures) {
 	var _this = this;
-	this.pictures = pictureArray;
-	this.currentPictureNumber = 0;
+	this.pictures = pictures;
+	this.currentPictureIndex = 0;
 	this.leftButton = document.querySelector('.left');
 	this.rightButton = document.querySelector('.right');
-	this.changingPicture = document.querySelector('.picturechanger');
+	this.changingPicture = document.querySelector('.picture-changer');
 	this.thumbnails = document.querySelector('.thumbnails');
-	
+
 
 	this.leftButton.addEventListener('click', function() {
 		_this.leftEvent();
@@ -25,19 +25,19 @@ function Gallery(pictureArray) {
 	});
 
 	this.leftEvent = function() {
-		if (this.currentPictureNumber === 0) {
-			this.currentPictureNumber = this.pictures.length;
+		if (this.currentPictureIndex === 0) {
+			this.currentPictureIndex = this.pictures.length;
 		}
-		this.currentPictureNumber --;
-		this.changingPicture.setAttribute('src', this.pictures[this.currentPictureNumber]);
+		this.currentPictureIndex--;
+		this.changingPicture.setAttribute('src', this.pictures[this.currentPictureIndex]);
 	};
 
 	this.rightEvent = function() {
-		if (this.currentPictureNumber === this.pictures.length-1) {
-			this.currentPictureNumber = 0;
+		if (this.currentPictureIndex === this.pictures.length-1) {
+			this.currentPictureIndex = 0;
 		}
-		this.currentPictureNumber ++;
-		this.changingPicture.setAttribute('src', this.pictures[this.currentPictureNumber]);
+		this.currentPictureIndex++;
+		this.changingPicture.setAttribute('src', this.pictures[this.currentPictureIndex]);
 	};
 
 	this.createThumbnails = function() {
