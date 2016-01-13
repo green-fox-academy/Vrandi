@@ -38,7 +38,7 @@ function CandyGame() {
       setInterval(function() {
       _this.NumberOfCandies += _this.NumberOfCounter;
       _this.refreschStats();
-      if (_this.NumberOfCandies === 10000) {
+      if (_this.NumberOfCandies >= 10000) {
         alert("WIN!!!");
       }
     }, 1000);
