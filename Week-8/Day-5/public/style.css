@@ -24,6 +24,18 @@ h1 {
   width: 500px;
 }
 
+button {
+  border-radius: 10px;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.complete-button {
+  background-color: #bdc3c7;
+}
+
 .add-item-button, .input {
   bottom: 40px;
   position: absolute;
@@ -48,9 +60,18 @@ h1 {
 }
 
 .todo-elements {
-  width: 300px;
   min-height: 20px;
   text-align: center;
   position: relative;
   padding: 10px 50px 100px;
+  width: 300px;
+}
+
+.true, .false {
+  font-weight: bolder;
+  padding: 5px;
+}
+
+.true {
+  text-decoration: line-through;
 }
