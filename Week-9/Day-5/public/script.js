@@ -15,15 +15,6 @@ function TodoApp() {
     _this.input.value = '';
   });
 
-  this.input.addEventListener('keydown', function(e) {
-    if (e.keyCode === 13) {
-      if (_this.input.value != '') {
-        _this.addItem();
-      }
-      _this.input.value = '';
-    }
-  });
-
   this.refresh = function() {
     this.todoItems.innerText = '';
     createRequest('GET', _this.url, null, _this.listCallback);
@@ -31,19 +22,20 @@ function TodoApp() {
 
   this.listCallback = function(response) {
     var todoArray = JSON.parse(response);
-    todoArray.forEach(function(todoItem) {
-      var newItem = document.createElement('div');
-      newItem.innerText = todoItem.text;
-      newItem.setAttribute('class', todoItem['completed']);
-      newItem.setAttribute('id', todoItem.todo_id);
-      newItem.addEventListener('click', _this.addButtons);
-      _this.todoItems.appendChild(newItem);
-    });
+    todoArray.forEach(function(todoItem) { _this.createItem(todoItem); });
+  };
+
+  this.createItem = function(todoItem) {
+    var newItem = document.createElement('div');
+    newItem.innerText = todoItem.text;
+    newItem.setAttribute('class', todoItem['completed']);
+    newItem.setAttribute('id', todoItem.todo_id);
+    newItem.addEventListener('click', _this.addButtons);
+    _this.todoItems.appendChild(newItem);
   };
 
   this.addItem = function() {
-    var textareaInput = this.input.value;
-    var newTodo = JSON.stringify({text: textareaInput});
+    var newTodo = JSON.stringify({text: _this.input.value});
     createRequest('POST', _this.url, newTodo, _this.createTodoCallback);
   };
 
@@ -89,17 +81,12 @@ function TodoApp() {
   };
 
   this.changeStatusToComplete = function() {
-    var parent = event.target.parentNode;
-    var id = parent.id;
-    var text = parent.innerText.substring(0, (parent.innerText).length-5);
-    var url = _this.url + '/' + id;
+    var url = _this.url + '/' + event.target.parentNode.id;
     createRequest('PUT', url, null, _this.createTodoCallback);
   };
 
   this.deleteItem = function() {
-    var id = event.target.parentNode.id;
-    console.log(id);
-    var url = _this.url + '/' + id;
+    var url = _this.url + '/' + event.target.parentNode.id;
     createRequest('DELETE', url, null, _this.createTodoCallback);
   };
 
